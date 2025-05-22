@@ -10,13 +10,13 @@ input[type="checkbox"] {
   width: 3% !important;
   display: inline-block;
   padding: 60px;
-  background: url(../images/logo.png) no-repeat left center;
+  background: url(/tastematch-recipe-sharing-platform/images/logo.png) no-repeat left center;
   background-size: 100%;
 }
 
 /* Change label image when checked */
 input[type="checkbox"]:checked + .label {
-  background-image: url(../images/salad.jpg);
+  background-image: url(/tastematch-recipe-sharing-platform/images/salad.jpg);
 }
 
 /* Paragraph styling */
