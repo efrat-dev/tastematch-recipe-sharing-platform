@@ -1,0 +1,107 @@
+/* Base styles */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1,
+h3 {
+  color: yellow;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  font-size: 1.2em;
+  margin-bottom: 0.5rem;
+}
+
+header,
+footer {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+/* Recipe card container */
+.recipe-card {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+}
+
+/* Highlighted titles in section nav */
+.recipe-card__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+
+.recipe-card__nav h3 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.recipe-card__nav h3::after {
+  content: "";
+  display: block;
+  width: 0%;
+  margin: 0 auto;
+  padding-top: 10px;
+  border-bottom: 5px solid yellow;
+  transition: width 250ms ease-in-out;
+}
+
+.recipe-card__nav h3:hover::after,
+.recipe-card__nav h3.active::after {
+  width: 100%;
+}
+
+/* Recipe image styling */
+.images {
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ========== Responsive Cards ========== */
+#card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  #card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  #card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

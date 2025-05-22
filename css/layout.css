@@ -1,0 +1,118 @@
+/* ========== Layout: Navbar & Footer ========== */
+
+.navbar {
+  background-color: rgba(243, 241, 244, 0.9) !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: rgb(10, 10, 10);
+  z-index: 2;
+  margin: 0;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(243, 241, 244, 0.8) !important;
+  color: rgb(3, 2, 1) !important;
+  text-align: center;
+}
+
+.footer {
+  font-size: 1.05em;
+  color: rgb(3, 2, 1) !important;
+}
+
+/* ========== Typography & Links ========== */
+
+.navbar a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  color: rgb(0, 0, 0) !important;
+  text-decoration: none;
+}
+
+.navbar a::before,
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.navbar a::after {
+  content: attr(data-replace);
+}
+
+.navbar a::before {
+  background-color: rgba(20, 20, 20, 0.667);
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover::before,
+.navbar a:focus::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+
+/* ========== Animation ========== */
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: bounceInDown;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+@media (max-width: 576px) {
+  footer {
+    padding: 5px 10px;
+  }
+
+  footer,
+  .footer {
+    font-size: 0.85em;
+  }
+}

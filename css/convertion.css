@@ -1,0 +1,47 @@
+/* Reset body margins and paddings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* Container for the conversion section */
+.conversion-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+}
+
+/* Heading styles */
+h1,
+h5,
+p {
+  text-align: center;
+}
+
+h1,
+h5 {
+  color: yellow; /* Accent color for headers */
+}
+
+/* Table text alignment and color */
+.table td,
+.table th,
+.table tr {
+  text-align: center;
+  color: #fff !important;
+}
+
+/* Button styling */
+.btn-group {
+  flex-wrap: wrap; /* Allow buttons to wrap on small screens */
+  justify-content: center;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-group .btn {
+  font-weight: bold;
+  min-width: 200px;
+  margin: 0.5rem 0;
+}

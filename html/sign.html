@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>הוספת מתכון | מטעים לי</title>
+
+    <!-- Favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico.png"
+      type="image/x-icon"
+      sizes="128x128"
+    />
+
+    <!-- Bootstrap CSS for responsive layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/signup-modal.css" />
+    <link rel="stylesheet" href="../css/sign.css" />
+
+    <!-- Bootstrap JS bundle and site script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/signup-form.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Navigation bar will be dynamically injected here -->
+      <div id="navbar-container"></div>
+    </header>
+
+    <main class="spacing-top">
+      <section>
+        <div class="margin">
+          <div class="dark-centered-box box2">
+            <br />
+
+            <h1><mark>חדש כאן?</mark></h1>
+            <p>
+              <strong>רק משתמשים רשומים יכולים להוסיף מתכונים למאגר.</strong>
+            </p>
+
+            <button class="btn btn-primary btn-sign open-modal">
+              הירשם עכשיו!
+            </button>
+
+            <!-- Signup Modal Wrapper -->
+            <div class="signup-wrapper">
+              <div
+                id="signupModal"
+                class="modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-title"
+              >
+                <span
+                  class="close close-modal"
+                  title="סגור"
+                  role="button"
+                  aria-label="סגור"
+                  >
+                  &times;
+                  </span>
+
+                <!-- Modal form for user signup -->
+                <form class="modal-content" action="../html/aftersign.html">
+                  <div class="modal-container">
+                    <h1 id="modal-title">טופס הרשמה</h1>
+                    <p>עוד כמה שניות ומסיימים...</p>
+                    <hr />
+
+                    <label for="email"><b>כתובת מייל</b></label>
+                    <br />
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="הכנס מייל"
+                      required
+                      aria-required="true"
+                      aria-label="הכנס מייל"
+                    />
+                    <br /><br />
+
+                    <label for="password"><b>סיסמה (לפחות 5 תווים)</b></label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="psw"
+                      placeholder="הכנס סיסמה"
+                      required
+                      aria-required="true"
+                      aria-label="הכנס סיסמה"
+                    />
+
+                    <label for="password-repeat"
+                      ><b>אנא הזינו שנית את הסיסמה</b>
+                    </label>
+                    <input
+                      type="password"
+                      id="password-repeat"
+                      name="psw-repeat"
+                      placeholder="חזור על הסיסמה"
+                      required
+                      aria-required="true"
+                      aria-label="חזור על הסיסמה"
+                    />
+
+                    <!-- Optional security question -->
+                    <label for="security-question"
+                      ><b>שאלת ביטחון (לא חובה)</b>
+                    </label>
+                    <br />
+                    <select name="security-question" id="security-question">
+                      <option value="grandmother">שמה של סבתי מצד אבי</option>
+                      <option value="animal">בעל החיים האהוב עליי</option>
+                      <option value="friend">שמו של ידידי הטוב ביותר</option>
+                      <option value="mother-family-name">
+                        שם משפחתה של אמי לפני הנישואין
+                      </option>
+                      <option value="color">הצבע האהוב עליי</option>
+                    </select>
+
+                    <input
+                      type="text"
+                      name="security-answer"
+                      placeholder="תשובתי היא..."
+                      aria-label="תשובתך לשאלת האבטחה"
+                    />
+
+                    <label>
+                      <input type="checkbox" required />
+                      אציית להוראות מנהלי האתר
+                    </label>
+
+                    <br />
+
+                    <label>
+                      <input type="checkbox" checked name="newsletter" />
+                      אני מעוניין לקבל דיוורים במייל
+                    </label>
+
+                    <div class="button-group">
+                      <button type="button" class="cancelbtn close-modal">
+                        ביטול
+                      </button>
+                      <button type="submit" class="btn-sign">הרשמה</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <br /><br />
+
+            <p><mark>כבר רשום?</mark></p>
+
+            <!-- Login form -->
+            <form action="../html/afterlogin.html">
+              <label for="login-email">
+                אנא הזן את כתובת המייל איתה נרשמת
+              </label>
+              <br />
+              <input type="email" id="login-email" required />
+              <button type="submit" class="button">התחבר</button>
+            </form>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Footer will be dynamically injected here -->
+      <div id="footer-container"></div>
+    </footer>
+  </body>
+</html>

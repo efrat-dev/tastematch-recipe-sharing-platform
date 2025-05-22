@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>מיון אישי | מטעים לי</title>
+
+    <!-- Favicon icon -->
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico.png"
+      type="image/x-icon"
+      sizes="128x128"
+    />
+
+    <!-- Bootstrap CSS for responsive layout -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sort.css">
+    <link rel="stylesheet" href="../css/layout.css">
+
+    <!-- Bootstrap JS bundle and site script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+    <script src="../scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Navigation bar will be dynamically injected here -->
+        <div id="navbar-container"></div>
+    </header>
+    
+    <main class="spacing-top">
+        <h3 class="dark-centered-box">
+            סמנו בבקשה את העדפותיכם באמצעות לחיצה על הריבועים המתאימים
+        </h3>
+
+        <form action="./aftersort.html">
+            <ul>
+
+                <!-- Kashrut -->
+                <section>
+                    <li><p class="start">כשרות</p></li>
+                    <div class="container">
+                      <li><label><p>חלבי</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>בשרי</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>פרווה</p><input type="checkbox"><span class="label"></span></label></li>
+                    </div>
+                  </section>
+          
+                <!-- Different types of dishes -->
+                <section>
+                  <li><p class="start">סוג המנה</p></li>
+                  <div class="container">
+                    <li><label><p>מתאבן</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>מנה עיקרית</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>תוספת</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>לחם</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>מרק</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>סלט</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>קינוח</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>ממתק או חטיף</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>משקה</p><input type="checkbox"><span class="label"></span></label></li>
+                  </div>
+                </section>
+
+                <!-- Beverage subtypes depending on previous selection -->
+                <section>
+                  <li><p class="start">סוג המשקה (אם נבחר משקה בקטגוריה הקודמת)</p></li>
+                  <div class="container">
+                    <li><label><p>קפה</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>תה</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>מיץ</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>מילקשייק</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>על בסיס חלב</p><input type="checkbox"><span class="label"></span></label></li>
+                    <li><label><p>על בסיס פירות</p><input type="checkbox"><span class="label"></span></label></li>
+                 </div>
+               </section>                           
+
+                <!-- Flavor preferences -->
+                <section>
+                    <li><p class="start">טעם</p></li>
+                    <div class="container">
+                      <li><label><p>מתוק</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>מלוח</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>חמוץ</p><input type="checkbox"><span class="label"></span></label></li>
+                    </div>
+                </section>
+          
+                <!-- Difficulty levels -->
+                <section>
+                    <li><p class="start">מידת קושי</p></li>
+                    <div class="container">
+                      <li><label><p>קל</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>קל-בינוני</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>בינוני</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>בינוני-קשה</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>קשה</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>למקצוענים</p><input type="checkbox"><span class="label"></span></label></li>
+                    </div>
+                  </section>
+
+                 <!-- Preparation time in ranges -->
+                 <section>
+                    <li><p class="start">משך הכנה (בדקות או בשעות)</p></li>
+                    <div class="container">
+                      <li><label><p>0-15</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>15-30</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>30-45</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>45-60</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>1-1.5</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>1.5-2</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>שעתיים ומעלה</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>לא נדרשת הכנה מוקדמת</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>ללא הקפאה</p><input type="checkbox"><span class="label"></span></label></li>
+                    </div>
+                  </section>
+          
+                <!-- Dietary restrictions -->
+                <section>
+                    <li><p class="start">העדפות בריאותיות - ללא...</p></li>
+                    <div class="container">
+                      <li><label><p>מוצרים מן החי</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>גלוטן</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>סוכר</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>צבעי מאכל</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>בוטנים</p><input type="checkbox"><span class="label"></span></label></li>
+                      <li><label><p>ביצים</p><input type="checkbox"><span class="label"></span></label></li>
+                    </div>
+                  </section>
+                </ul>
+
+             <!-- Email input and submission -->
+               <section>
+                  <div class="contain">
+                    <label class="dark-centered-box">הכנס את כתובת המייל שאליה יישלחו התוצאות</label>
+                    <input type="email" required>
+                    <button type="submit">שלח</button>
+                  </div>
+               </section>
+
+          <br /><br />
+        </form>
+      </main>
+
+   <footer>
+      <!-- Footer will be dynamically injected here -->
+      <div id="footer-container"></div>
+   </footer>
+ </body>
+</html>

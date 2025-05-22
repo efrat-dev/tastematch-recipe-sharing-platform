@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <title>שיתוף מתכון | מטעים לי</title>
+
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="../images/favicon.ico.png" type="image/x-icon" sizes="128x128" />
+  
+    <!-- Bootstrap CSS for responsive layout -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Custom CSS files -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/addrecipe.css" />
+
+    <!-- Bootstrap JS bundle and site script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="../scripts/main.js" defer></script>
+  </head>  
+
+  <body>
+    <header>
+      <!-- Navigation bar will be dynamically injected here -->
+      <div id="navbar-container"></div>
+    </header>
+
+    <main class="spacing-top">
+      <h1 class="dark-centered-box">
+        שתפו את המתכון שלכם איתנו ותרמו להרחבת המאגר!
+      </h1>
+
+      <!-- Form for submitting a new recipe -->
+      <form action="../html/afteraddrecipe.html" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>פרטי המתכון</legend>
+
+       <!-- Basic recipe information -->
+       <section>
+          <label for="recipe-name">שם המתכון:</label>
+          <input
+            type="text"
+            id="recipe-name"
+            name="recipeName"
+            placeholder="לדוגמה: עוגת שוקולד"
+            required
+          />
+
+          <label for="dish-type">סוג מנה:</label>
+          <select id="dish-type" name="dishType" required>
+            <option value="">בחר</option>
+            <option value="Main Dish">מנה עיקרית</option>
+            <option value="Side Dish">תוספת</option>
+            <option value="Appetizer">מתאבן</option>
+            <option value="Soup">מרק</option>
+            <option value="Salad">סלט</option>
+            <option value="Dessert">קינוח</option>
+            <option value="Drink">משקה</option>
+            <option value="Other">אחר</option>
+          </select>
+        </section>
+
+        <!-- Preparation and cooking times -->
+        <section>
+          <label for="prep-time">משך הכנה:</label>
+          <input
+            type="text"
+            id="prep-time"
+            name="prepTime"
+            placeholder="לדוגמה: 20 דקות"
+          />
+
+          <label for="cook-time">משך בישול:</label>
+          <input
+            type="text"
+            id="cook-time"
+            name="cookTime"
+            placeholder="לדוגמה: 45 דקות"
+          />
+        </section>
+
+        <!-- Additional details: servings, shelf life, difficulty, ingredients, instructions, image -->
+        <section>
+          <label for="servings">מספר מנות:</label>
+          <input
+            type="number"
+            id="servings"
+            name="servings"
+            min="1"
+            placeholder="לדוגמה: 4"
+          />
+
+          <label for="shelf-life">חיי מדף (בימים):</label>
+          <input
+            type="number"
+            id="shelf-life"
+            name="shelfLife"
+            min="1"
+            placeholder="לדוגמה: 3"
+          />
+
+          <label>רמת קושי:</label><br />
+          <label><input type="radio" name="difficulty" value="קל" /> קל</label>
+          <label><input type="radio" name="difficulty" value="בינוני" />בינוני</label>
+          <label><input type="radio" name="difficulty" value="קשה" /> קשה</label>
+
+          <br />
+
+          <label for="ingredients">רכיבים:</label>
+          <textarea id="ingredients" name="ingredients" rows="4"></textarea>
+
+          <label for="instructions">הוראות הכנה:</label>
+          <textarea id="instructions" name="instructions" rows="4"></textarea>
+
+          <label for="image">תמונה:</label>
+          <input type="file" id="image" name="image" accept="image/*" />
+        </section>
+
+         <button type="submit">שלחו מתכון</button>
+       </fieldset>
+     </form>
+   </main>
+ <footer>
+  <!-- Footer will be dynamically injected here -->
+  <div id="footer-container"></div>
+ </footer>
+</body>
+</html>

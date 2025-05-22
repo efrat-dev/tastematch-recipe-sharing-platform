@@ -1,0 +1,70 @@
+/* ========== Global Styles ========== */
+body {
+  direction: rtl;
+  background-image: url(../images/food18.jpg) !important;
+  background-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Text Selection ========== */
+::selection {
+  background-color: rgba(128, 128, 128, 0.268);
+}
+
+/* ========== Layout Utility Classes ========== */
+.spacing-top {
+  padding-top: 160px; /* Adds space from the top, useful for fixed headers */
+}
+
+/* ========== Themed Boxes ========== */
+.box2 {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+.dark-centered-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  text-align: center;
+}
+
+/* Padding bottom before footer on small screens */
+@media (max-width: 576px) {
+  body::after {
+    content: "";
+    display: block;
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  body::after {
+    content: "";
+    display: block;
+    height: 100px;
+  }
+}
+
+/* ========== Responsive Design ========== */
+
+/* Small screens: smartphones */
+@media (max-width: 576px) {
+  .spacing-top {
+    padding-top: 180px;
+  }
+}
+
+/* Medium screens: tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+  .spacing-top {
+    padding-top: 140px;
+  }
+}
+
+/* Large screens: small laptops and up */
+@media (min-width: 769px) and (max-width: 992px) {
+  .spacing-top {
+    padding-top: 160px;
+  }
+}

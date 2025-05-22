@@ -1,0 +1,124 @@
+/* ========== Global Reset ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Base Typography ========== */
+body {
+  font-family: "Oxygen", sans-serif;
+  background-color: #f8f9fa;
+  direction: rtl;
+  text-align: center;
+  overflow-x: hidden; /* prevent accidental horizontal scroll */
+}
+
+h1,
+span {
+  color: rgb(246, 246, 21);
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* ========== Utility Boxes ========== */
+.box2,
+.dark-text-block {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 800px; /* cap on large screens */
+}
+
+/* ========== Slideshow ========== */
+.slideshow-container {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides.active {
+  display: block;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  background-color: rgba(0, 0, 0, 0.552);
+  color: #fff;
+  padding: 0.5rem;
+}
+
+/* Fade animation */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade 2.5s ease-in-out;
+}
+
+/* ========== Video Container ========== */
+.ratio-16x9 {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ========== “Show More” Toggle ========== */
+#more {
+  display: none;
+  color: #fff;
+}
+
+#more.show {
+  display: inline;
+}
+
+#dots.hide {
+  display: none;
+}
+
+/* ========== Responsive: No horizontal scroll ========== */
+@media (max-width: 600px) {
+  .box2,
+  .dark-text-block,
+  .slideshow-container,
+  .ratio-16x9 {
+    padding: 0.5rem;
+    margin: 1rem auto;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .box2,
+  .dark-text-block,
+  .slideshow-container,
+  .ratio-16x9 {
+    padding: 1rem;
+    margin: 1.5rem auto;
+  }
+}
+
+@media (min-width: 993px) {
+  /* keep max-width 800px, centered */
+}

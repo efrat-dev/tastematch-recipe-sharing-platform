@@ -1,0 +1,148 @@
+/* ========== CSS Variables ========== */
+:root {
+  --clr-primary: #dfcf1f;
+  --clr-primary-hover: #ff3b3b;
+  --clr-gray200: #cfd8dc;
+  --radius: 0.5rem;
+}
+
+/* ========== Base Styles ========== */
+body {
+  font-family: "Oxygen", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Intro Section ========== */
+.intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding-bottom: 2rem;
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+/* ========== Card Container Layout ========== */
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* ========== Card Styles ========== */
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* ========== Link Button ========== */
+.link {
+  text-align: center;
+}
+
+.recepie-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--clr-primary);
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: background 0.3s ease;
+  color: black;
+  text-decoration: none;
+}
+
+.recepie-link:hover {
+  background: var(--clr-primary-hover);
+  color: white;
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+@media (max-width: 576px) {
+  #card-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  #card-container {
+    justify-content: space-around;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 45%;
+  }
+
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #card-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .grad {
+    font-size: 1.5rem;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+  }
+}

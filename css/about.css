@@ -1,0 +1,84 @@
+/* ========== General Container Styles ========== */
+.about-container {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+/* ========== Title and Highlight Text ========== */
+.about-title,
+.about-highlight span {
+  color: yellow;
+}
+
+/* ========== Paragraph Sizes ========== */
+.about-paragraph-large {
+  font-size: 2em;
+}
+
+.about-paragraph-medium {
+  font-size: 1.7em;
+}
+
+.about-paragraph-small {
+  font-size: 1.17em;
+}
+
+.about-paragraph-xsmall {
+  font-size: 1em;
+}
+
+/* ========== Spacing Utility Class ========== */
+.page-spacing {
+  margin-top: 6rem; /* Optional page spacing utility */
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Small screens: phones */
+@media (max-width: 575.98px) {
+  .about-container {
+    width: 95%;
+    padding: 5%;
+  }
+
+  .about-paragraph-large {
+    font-size: 1.5em;
+  }
+
+  .about-paragraph-medium {
+    font-size: 1.3em;
+  }
+}
+
+/* Medium screens: tablets */
+@media (min-width: 576px) and (max-width: 768px) {
+  .about-container {
+    width: 90%;
+    padding: 4%;
+  }
+
+  .about-paragraph-large {
+    font-size: 1.7em;
+  }
+
+  .about-paragraph-medium {
+    font-size: 1.5em;
+  }
+}
+
+/* Large screens: desktops and up */
+@media (min-width: 769px) {
+  .about-container {
+    width: 70%;
+    padding: 2%;
+  }
+
+  .about-paragraph-large {
+    font-size: 2em;
+  }
+
+  .about-paragraph-medium {
+    font-size: 1.7em;
+  }
+}

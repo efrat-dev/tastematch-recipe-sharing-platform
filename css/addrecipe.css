@@ -1,0 +1,130 @@
+/* ========== Base Layout and Typography ========== */
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Main Heading ========== */
+main h1 {
+  text-align: center;
+  margin-top: 2rem;
+  color: #151414;
+  font-size: 1.8rem;
+}
+
+/* ========== Form Container ========== */
+form {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ========== Form Labels ========== */
+form label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #5c4033;
+}
+
+form label[for="difficulty"] {
+  margin-bottom: 0.3rem;
+}
+
+/* Style for radio labels only */
+form label:has(input[type="radio"]) {
+  font-weight: normal;
+  margin-inline-end: 1rem;
+}
+
+/* ========== Form Inputs ========== */
+form input[type="text"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fffaf5;
+}
+
+form input[type="radio"] {
+  margin-left: 0.4rem;
+}
+
+/* ========== Submit Button ========== */
+form button {
+  background-color: #d2691e;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #a0522d;
+}
+
+/* ========== Responsive Design ========== */
+
+/* Small screens (phones) */
+@media (max-width: 575.98px) {
+  form {
+    padding: 1rem;
+  }
+
+  main h1 {
+    font-size: 1.4rem;
+    padding: 0 1rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 576px) and (max-width: 768px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  main h1 {
+    font-size: 1.6rem;
+  }
+
+  form button {
+    font-size: 1.05rem;
+  }
+}
+
+/* Large screens (desktops and up) */
+@media (min-width: 769px) {
+  main h1 {
+    font-size: 1.8rem;
+  }
+
+  form {
+    padding: 2rem;
+  }
+
+  form button {
+    font-size: 1.1rem;
+  }
+}

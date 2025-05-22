@@ -1,0 +1,108 @@
+/* ============ General Resets & Base Styles ============ */
+
+/* Hide default checkboxes */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Checkbox custom label */
+.label {
+  width: 3% !important;
+  display: inline-block;
+  padding: 60px;
+  background: url(../images/logo.png) no-repeat left center;
+  background-size: 100%;
+}
+
+/* Change label image when checked */
+input[type="checkbox"]:checked + .label {
+  background-image: url(../images/salad.jpg);
+}
+
+/* Paragraph styling */
+p {
+  background-color: rgb(183, 171, 171);
+  color: rgb(25, 26, 24);
+}
+
+/* Remove bullets from unordered list */
+ul {
+  list-style-type: none;
+}
+
+/* Section titles */
+.start {
+  background-color: rgba(128, 128, 128, 0.281);
+}
+
+/* Centered container for footer/email section */
+.contain {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+/* ============ Typography & Alignment ============ */
+h3,
+li {
+  text-align: center;
+}
+
+/* ============ Grid Layout ============ */
+
+/* Default grid: 3 columns */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* ============ Responsive Breakpoints ============ */
+
+/* Small screens: 1 column */
+@media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .label {
+    width: 100% !important;
+    padding: 40px;
+    background-position: center;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium screens: 2 columns */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .label {
+    width: 100% !important;
+    padding: 50px;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large screens: 3 columns (default, repeated here for clarity) */
+@media screen and (min-width: 1025px) {
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .label {
+    width: 3% !important;
+    padding: 60px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}

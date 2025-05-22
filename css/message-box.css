@@ -1,0 +1,79 @@
+/* ============================
+   Confirmation Message Styling
+   ============================ */
+
+/* Base style for the confirmation box */
+.confirmation-message {
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ============================
+   Link Button Styling
+   ============================ */
+
+/* Base style for link styled as a button */
+.link {
+  background-color: yellow;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the link */
+.link:hover {
+  background-color: gold;
+}
+
+/* ============================
+   Responsive Breakpoints
+   ============================ */
+
+/* Breakpoint 1: Up to 900px */
+@media screen and (max-width: 900px) {
+  .confirmation-message {
+    padding: 1.8rem;
+  }
+
+  .link {
+    font-size: 1.1em;
+  }
+}
+
+/* Breakpoint 2: Up to 700px */
+@media screen and (max-width: 700px) {
+  .confirmation-message {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .link {
+    font-size: 1em;
+    padding: 0.5rem 0.9rem;
+  }
+}
+
+/* Breakpoint 3: Up to 500px */
+@media screen and (max-width: 500px) {
+  .confirmation-message {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .link {
+    font-size: 0.95em;
+    padding: 0.4rem 0.8rem;
+  }
+}
