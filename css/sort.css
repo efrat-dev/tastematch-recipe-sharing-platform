@@ -16,7 +16,7 @@ input[type="checkbox"] {
 
 /* Change label image when checked */
 input[type="checkbox"]:checked + .label {
-  background-image: url(/tastematch-recipe-sharing-platform/images/salad.jpg);
+  background-image: url(/tastematch-recipe-sharing-platform/images/salad_tiny.jpg);
 }
 
 /* Paragraph styling */
