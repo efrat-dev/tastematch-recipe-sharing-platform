@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageBasePath = "/tastematch-recipe-sharing-platform/images/recipe-gallery/";
   
     // Base path for all recipe HTML pages
-    const htmlBasePath = "/tastematch-recipe-sharing-platform/html/";
+    const htmlBasePath = "/tastematch-recipe-sharing-platform/html/recipes/";
   
     const recipes = [
       {
