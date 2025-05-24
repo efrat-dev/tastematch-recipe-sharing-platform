@@ -50,7 +50,7 @@ Just like a good match-making platform, this site helps users find the perfect d
 
 ## 👩‍💻 Author
 
-Created by [Efrat Badil](https://github.com/efrat-dev)  
+Created by [Efrat Bdil](https://github.com/efrat-dev)  
 Feel free to explore the code, fork the project, or reach out with feedback!
 
 ---
